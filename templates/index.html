@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberAware | Think Before You Click</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">🛡</span><div><b>CyberAware</b><small>SECURITY AWARENESS</small></div></div>
+    <nav id="navigation">
+      <button class="nav-link active" data-page="overview">▦ <span>Overview</span></button>
+      <button class="nav-link" data-page="learn">◈ <span>Learning modules</span></button>
+      <button class="nav-link" data-page="phishing">⚑ <span>Phishing checker</span></button>
+      <button class="nav-link" data-page="password">🔐 <span>Password checker</span></button>
+      <button class="nav-link" data-page="quiz">☷ <span>Cybersecurity quiz</span></button>
+      <button class="nav-link" data-page="assessment">✓ <span>Assessment</span></button>
+      <button class="nav-link" data-page="social">◎ <span>Social engineering</span></button>
+      <button class="nav-link" data-page="tips">✦ <span>Security tips</span></button>
+      <button class="nav-link" data-page="progress">◴ <span>Track progress</span></button>
+      <button class="nav-link" data-page="records">▤ <span>Student records</span></button>
+    </nav>
+    <div class="sidebar-note"><span class="pulse"></span> Stay alert. Stay protected.</div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div><span class="eyebrow">CYBERSECURITY EDUCATION</span><h1 id="page-title">Overview</h1></div><div class="user-chip"><span class="avatar">LV</span><span><b>CyberAware</b><small>Learning portal</small></span></div></header>
+    <section class="hero">
+      <div><span class="hero-tag">WELCOME TO CYBERAWARE</span><h2>Think before you click.<br><em>Stay one step ahead.</em></h2>
+      <p>A cybersecurity awareness application designed to help you recognise online dangers, build safer habits and protect yourself from cybercrime.</p>
+      <button class="primary-btn" data-go="learn">Start learning <span>→</span></button></div>
+      <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="shield">🛡</div><span class="art-dot dot-a"></span><span class="art-dot dot-b"></span><span class="art-dot dot-c"></span></div>
+    </section>
+    <section id="overview" class="page active">
+      <div class="section-heading"><div><span class="eyebrow">YOUR LEARNING SNAPSHOT</span><h2>Dashboard</h2></div><button class="quiet-btn" id="refresh">↻ Refresh</button></div>
+      <div class="stat-grid">
+        <article class="stat-card"><span class="stat-icon blue">♙</span><small>Total students</small><strong id="total-students">0</strong><span class="stat-foot">Unique learners</span></article>
+        <article class="stat-card"><span class="stat-icon purple">✓</span><small>Assessment attempts</small><strong id="attempts">0</strong><span class="stat-foot">Submitted assessments</span></article>
+        <article class="stat-card"><span class="stat-icon green">▥</span><small>Average assessment</small><strong id="avg-assessment">0%</strong><span class="stat-foot">Across all attempts</span></article>
+        <article class="stat-card"><span class="stat-icon orange">◴</span><small>Average learning progress</small><strong id="avg-progress">0%</strong><span class="stat-foot">Latest learner progress</span></article>
+      </div>
+      <div class="content-grid">
+        <article class="panel welcome-panel"><span class="eyebrow">LEARN • PRACTISE • PROTECT</span><h3>Build your cyber safety knowledge</h3><p>Explore practical lessons, test suspicious messages, check password strength and measure your learning progress.</p><div class="mini-points"><span>✓ Practical learning</span><span>✓ Interactive assessments</span><span>✓ Progress tracking</span></div></article>
+        <article class="panel quote-panel"><span class="quote-mark">“</span><h3>Your first line of defence is awareness.</h3><p>Think before you trust, click or share.</p><span class="quote-rule"></span><small>CYBERAWARE PRINCIPLE</small></article>
+      </div>
+    </section>
+    <section id="learn" class="page"><div class="section-heading"><div><span class="eyebrow">KNOW THE RISKS</span><h2>Learning modules</h2></div></div><div id="learning-cards" class="learning-grid"></div></section>
+    <section id="phishing" class="page"><div class="section-heading"><div><span class="eyebrow">MESSAGE SAFETY</span><h2>Phishing awareness checker</h2></div></div><div class="panel form-panel"><p>Paste a fictional email or message to check for common suspicious phrases. Do not paste real passwords or private messages.</p><label for="message-input">Message to analyse</label><textarea id="message-input" placeholder="Example: URGENT! Verify your account now by clicking here..."></textarea><button class="primary-btn" id="check-message">Analyse message →</button><div id="phishing-result" class="result-box hidden"></div></div></section>
+    <section id="password" class="page"><div class="section-heading"><div><span class="eyebrow">ACCOUNT PROTECTION</span><h2>Password strength checker</h2></div></div><div class="panel form-panel narrow"><div class="notice">⚠ IMPORTANT: Enter only a fictional test password. Never enter your real password.</div><label for="password-input">Fictional test password</label><div class="password-wrap"><input id="password-input" type="password" placeholder="Enter a test password"><button id="toggle-password" class="eye-btn" type="button">Show</button></div><button class="primary-btn" id="check-password">Check strength →</button><div id="password-result" class="result-box hidden"></div></div></section>
+    <section id="quiz" class="page"><div class="section-heading"><div><span class="eyebrow">TEST YOUR KNOWLEDGE</span><h2>Cybersecurity quiz</h2></div></div><div class="panel quiz-panel"><div id="quiz-area"></div></div></section>
+    <section id="assessment" class="page"><div class="section-heading"><div><span class="eyebrow">LEARNING CHECKPOINT</span><h2>Cybersecurity assessment</h2></div></div><div class="panel quiz-panel"><div id="assessment-area"></div></div></section>
+    <section id="social" class="page"><div class="section-heading"><div><span class="eyebrow">RECOGNISE MANIPULATION</span><h2>Social engineering awareness</h2></div></div><div id="attack-cards" class="learning-grid"></div></section>
+    <section id="tips" class="page"><div class="section-heading"><div><span class="eyebrow">SMALL HABITS, STRONGER SECURITY</span><h2>Cybersecurity security tips</h2></div><button id="random-tip" class="quiet-btn">✦ Random tip</button></div><div class="panel tip-feature" id="random-tip-box">Choose a tip to get started.</div><div id="tips-list" class="tips-list"></div></section>
+    <section id="progress" class="page"><div class="section-heading"><div><span class="eyebrow">YOUR LEARNING JOURNEY</span><h2>Student progress tracker</h2></div></div><div class="panel form-panel"><label for="student-id">Anonymous student ID</label><input id="student-id" placeholder="e.g. STUDENT001"><p class="muted">Mark the modules you have completed. Your progress will be saved on this application server.</p><div id="module-checklist" class="checklist"></div><button id="save-progress" class="primary-btn">Save my progress →</button><div id="progress-result" class="result-box hidden"></div></div></section>
+    <section id="records" class="page"><div class="section-heading"><div><span class="eyebrow">LEARNING ANALYTICS</span><h2>Student records</h2></div></div><div class="panel form-panel"><div class="search-row"><div><label for="record-search">Search by anonymous student ID</label><input id="record-search" placeholder="Enter student ID (leave blank for all)"></div><button id="search-records" class="primary-btn">Search</button></div><div id="records-output" class="records-output"></div><div class="pdf-row"><input id="pdf-student-id" placeholder="Student ID for PDF report"><button id="generate-pdf" class="quiet-btn">Download PDF report ↓</button></div></div></section>
+    <footer>CYBERAWARE · Created by Lavelah Vesselee <span>Think Before You Click. Stay Alert. Stay Protected!</span></footer>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body></html>

@@ -1,0 +1,20 @@
+[
+    {
+        "student_id": "lv",
+        "completed_modules": [
+            "Introduction to Cybersecurity",
+            "Phishing Awareness",
+            "Password Security",
+            "Social Engineering",
+            "Safe Browsing",
+            "Cybersecurity Quiz",
+            "Security Tips",
+            "Online Privacy",
+            "Cybercrime Awareness"
+        ],
+        "total_modules": 9,
+        "completed_count": 9,
+        "progress_percentage": 100.0,
+        "created_at": "2026-11-07T16:07:32"
+    }
+]
